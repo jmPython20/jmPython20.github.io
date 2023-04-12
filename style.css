@@ -39,26 +39,18 @@
     cursor: pointer;
 }
 
-/* .testowy_div{
-    position: fixed;
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    bottom: 20px;
-    right: 100px;
-}
 
 #myBtn {
     display: none;
     z-index: 99;
     position: fixed;
-    bottom: 40px;
-    right: 30px;
+    bottom: 10px;
+    right: 10px;
     z-index: 99;
-    font-size: 100px;
+    font-size: 20px;
     border: none;
     outline: none;
-    background-color: red;
+    background-color: rgba(206, 206, 206, 0.932);
     color: white;
     cursor: pointer;
     padding: 15px;
@@ -67,7 +59,7 @@
   
 #myBtn:hover {
     background-color: #555;
-} */
+} 
 
 
 ul li {
@@ -147,6 +139,7 @@ nav a{
 }
 
 .container{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     backdrop-filter: blur(4px);
     display: flex;
     max-width: 90rem;
@@ -379,7 +372,7 @@ form input, form textarea {
 
 
 .kontakt_1 h2 span{
-    color:  #2da8fa;
+    color:  #262626;
     
 }
 
