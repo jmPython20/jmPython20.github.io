@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    
     box-sizing: border-box;
     color: rgb(236, 236, 236);
     
@@ -139,7 +139,7 @@ nav a{
 }
 
 .container{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     backdrop-filter: blur(4px);
     display: flex;
     max-width: 90rem;
@@ -163,7 +163,7 @@ nav a{
 .container h1{
     align-self: center;
     font-size: 50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .div_do {
@@ -198,25 +198,10 @@ nav a{
     color: #ffffff;
     text-decoration: none;
     font-size:30px;
-    /* position: relative;
-    cursor: pointer;
-    margin: 10px; */
-}
-
-/* .montaz a::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #ffffff;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 1s;
 
 }
-.montaz a:hover::after {
-    width: 100%;
-} */
+
+
 
 .div_do p{
     font-size: 30px;
@@ -412,8 +397,8 @@ iframe{
     margin: 0;
     background-color: rgba(0, 0, 0, 0.425);   
     backdrop-filter: blur(4px);
-  
 }
+  
 .small_menu{
     display: flex;
     flex-direction: column;
@@ -443,6 +428,7 @@ iframe{
 
 .small_social_media p{
     font-size: 15px;
+    
 }
 
 /*--------------------- media------------------------- */

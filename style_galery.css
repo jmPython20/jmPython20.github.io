@@ -6,5 +6,9 @@
         font-size: 30px;
         padding-top: 100px;
         
+        
+    }
+    .container.r {
+        text-align : center
     }
 }
