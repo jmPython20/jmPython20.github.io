@@ -411,6 +411,7 @@ iframe{
     width: 100%;
     margin: 0;
     background-color: rgba(0, 0, 0, 0.425);   
+    backdrop-filter: blur(4px);
   
 }
 .small_menu{
