@@ -1,0 +1,649 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;1,400&display=swap');
+
+
+/* info kolory, text, itp */
+:root{
+    --c-brand: #fac562;
+    --c-dark: #333;
+    --c-body: 666;
+    --f-base: "Plus Jakarta Sans", sans-serif;
+    --n-height:100px;
+    --c-light:#f8f8f8;
+}
+
+*,*::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    color: var(--c-body);
+    font-family: var(--f-base);
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color:var(--c-dark);
+    line-height: 1.2;
+    margin-bottom: 10px;
+    font-weight: 400;
+
+}
+
+.heading-xl {
+    font-size: clamp(44px, 10vh, 120px);
+    font-weight: 400;
+}
+
+.heading-1 {
+    /* responsive text */
+    font-size: clamp(32px, 6vh, 54px);
+}
+
+.heading-2{
+    font-size: clamp(28px, 4vh, 36px);
+}
+
+.heading-3{
+    font-size: 20px;
+}
+
+a {
+    color: var(--c-dark);
+    text-decoration: none;
+    transition:all 0.4s ease-in-out;
+}
+
+a:hover {
+    color: var(--c-brand);
+}
+
+.img_realizacje, .img_stoly {
+    max-width: 100%;
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+ul{
+    list-style: none;
+}
+
+section {
+    padding: 140px 0;
+}
+.container{
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.btn{
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid var(--c-brand);
+    font-family: var(--f-base);
+    padding: 16px 34px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    font-size: 14px;
+}
+
+.btn:hover{
+    background-color: var(--c-brand);
+    color: white;
+}
+
+/* -----------------------------Menu nawigacyjne----------------------------------*/
+
+.logo{
+    width: 250px;
+    align-self: center;
+    justify-self: center;
+    -webkit-filter: invert(100%);
+}
+
+
+
+.navbar{
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: var(--n-height);
+    display: flex;
+    z-index: 99;
+    
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    color: white;
+    font-size: 28px;
+}
+
+.nav-links {
+    display: flex;
+}
+.nav-links li:not(:last-child){
+    margin-right: 44px;
+}
+
+.nav-links li.active a{
+    box-shadow: 0 2px var(--c-brand);
+}
+
+.nav-links li a {
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links li a:hover {
+    color:  var(--c-brand);
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger span {
+    display: block;
+    width: 34px;
+    height: 2px;
+    background-color: white;
+    margin: 8px auto;
+    transition: all 0.4s ease;
+}
+
+.hamburger.active span:nth-child(1){
+    transform: translateY(5px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2){
+    transform: translateY(-5px) rotate(-45deg);
+}
+
+.scrolled {
+    background-color: #ffffff;
+    
+}
+
+.scrolled .logo{
+    -webkit-filter: invert(0%);
+}
+
+.scrolled .brand{
+    color: var(--c-dark);
+}
+
+.scrolled .nav-links li a{
+    color: var(--c-dark);
+}
+
+.scrolled .nav-links li a:hover{
+    color: var(--c-brand);
+}
+
+.scrolled .hamburger span {
+    background-color: var(--c-dark);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: var(--n-height);
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        padding: 0 24px;
+        transition: all 0.3s ease-in-out;
+        height: 0;
+        overflow: hidden;
+        background-color: white;
+        justify-content: center;
+        
+    }
+
+    .nav-links li a{
+        color: var(--c-dark);
+    }
+
+    .nav-links.active {
+        height: 200px;
+    }
+
+    .nav-links li {
+        padding: 6px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* ------------------------------------------#home ---------------------------------------- */
+
+#home {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.142)) , url("/drewland_realizacje/schody/tlostrona.jpg");
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+#home h1 {
+    color: white;
+}
+
+@keyframes scrolltodown {
+    0% {
+        transform: translateY(30%);
+        opacity: 0;
+    }
+    
+    50% {
+        transform: translateY(-30%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(60%);
+        opacity: 0;
+    }
+}
+
+.scroll-to-down{
+    width: 30px;
+    height: 60px;
+    display: grid;
+    place-content: center;
+    font-size: 24px;
+    color: white;
+    border: 2px solid rgba(255,255,255,255);
+    border-radius: 100px;
+    position: absolute;
+    bottom: 48px;
+    left: 47%;
+    
+    
+}
+
+.scroll-to-down .las{
+    animation: scrolltodown 2s ease infinite;
+}
+
+/* --------------------- Section Intro --------------------*/
+
+.section-intro{
+    margin-bottom: 44px;
+}
+
+
+
+
+/* ---------------------- Grid ---------------------- */
+
+.grid {
+    display: grid;
+    gap: 44px;
+}
+
+.two-col-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.three-col-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media(max-width: 768px){
+    .grid {
+        gap: 24px;
+    }
+    .two-col-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .three-col-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/*--------------------------- O nas ------------------------------*/
+
+#O_nas .grid{
+    gap: 0;
+}
+
+.service:nth-child(odd) {
+    background-color: var(--c-light);
+}
+
+.service {
+    padding: 44px;
+}
+
+.service p{
+    font-size: 14px;
+}
+
+.service .icon{
+    font-size: 38px;
+    color: var(--c-brand);
+}
+
+
+/* ----------------------- wycena ----------------------- */
+
+
+
+
+#wycena{
+    gap: 0;
+}
+
+.montaz:nth-child(2) {
+    background-color: var(--c-light);
+}
+
+.montaz {
+    padding: 44px;
+}
+
+.montaz p{
+    font-size: 14px;
+}
+
+.montaz .icon{
+    font-size: 38px;
+    color: var(--c-brand);
+}
+
+
+/* ----------------------//wycena ----------------------- */
+
+
+/* ------------------------- Luksusowe stoły ------------------------------- */
+.project {
+    position: relative;
+    overflow: hidden;
+}
+
+.project img{
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease-in-out;
+}
+
+.project .overlay{
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0,0,0,0.8);
+    padding: 44px;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.4s ease-in-out;
+    flex-wrap: wrap;
+    opacity: 0;
+    
+}
+/* media font in project----------------------------------------<< */
+@media(max-width:460px){
+    .project-text p{
+        font-size: 10px;
+    }
+
+}
+/* ---------------------------- */
+
+
+.project .overlay h2 {
+    color: white;
+}
+
+.project .overlay p {
+    color: rgb(255, 255, 255,0.6);
+}
+
+.project:hover .overlay{
+    opacity: 1;
+    display: flex;
+}
+
+.project:hover img{
+    transform: rotate(0deg) scale(1.5);
+}
+
+/*-------------------- realizacje ----------------------*/
+
+#realizacje {
+    background-color: var(--c-light);
+
+}
+
+.realizacje-post h3 {
+    margin-top: 16px;
+}
+
+/* ----------------- contact ------------- */
+
+#contact .grid {
+    grid-template-columns: 1fr 2.5fr;
+}
+
+@media(max-width: 768px){
+    #contact .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+form {
+    width: 100%;
+}
+
+.contact-widget {
+    margin-bottom: 44px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group .form-input{
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+    border-radius: 0;
+    border: none;
+    font-family: var(--f-base);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.form-group .form-input:focus{
+    outline: none;
+}
+
+.form-group .form-input:focus{
+    border-bottom: 1px solid var(--c-brand);
+    transition: all 0.4s ease-in-out;
+}
+
+/* ----------- google  mapa -------------- */
+
+iframe{
+    
+    width: 100%;
+    height: 500px;
+}
+
+.mapa-intro {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+/* ----------------- footer------------- */
+
+footer {
+    background-color: var(--c-dark);
+    padding: 15px 0;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_menu a{
+    font-size: 12px;
+    padding: 0;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer p,
+footer a{
+    color: #ffffff;
+}
+
+footer a{
+    font-size: 24px;
+}
+
+footer a:not(:last-child){
+    margin-right: 24px;
+}
+
+
+/* ----------------------------------- galeria schodów ------------------------ */
+
+.img_galery{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.full-img img{
+    width: 90%;
+    max-width: 600px;
+    z-index: 100;
+}
+
+.full-img span{
+    position: absolute;
+    top:5%;
+    right: 5%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.full-img {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    position: fixed;
+    left:0;
+    top:0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.grid_galery {
+    display: grid;
+    
+    column-gap: 8px;
+    row-gap: 0;
+}
+
+
+.three-col-grid_galery {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.realizacje-post {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* animation - text */
+
+/* .container-big-text{
+    display: flex;
+    max-width: 800px;
+    height: 400px;
+    align-items: center;
+    
+
+} */
+
+/* .ml4 .letters{
+    overflow: hidden;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    
+} */
+
+/* .ml4 {
+    display: flex;
+    position: absolute;
+    font-weight: 900;
+    font-size: 4em;
+    
+}
+.ml4 .letters {
+    position: absolute;
+    
+    left: 0;
+    top: 0.3em;
+    right: 0;
+    opacity: 0; 
+    
+    width: 700px;
+    
+    
+} */
