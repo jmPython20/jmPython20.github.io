@@ -42,6 +42,7 @@ body {
     body{
         background-image: url("/drewland_realizacje/schody/tlokamien_telefon.png");
         background-size: contain;
+        background-attachment: fixed;
     }
 }
 
