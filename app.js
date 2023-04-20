@@ -8,10 +8,10 @@ const navLinksLi = document.querySelectorAll('.nav-links li')
 window.addEventListener('scroll', () => {
     if(this.scrollY >= 100) {
         navbar.classList.add('scrolled')
-        srclogo.src="/drewland_realizacje/schody/logo_black.png"
+        srclogo.src="/drewland_realizacje/schody/logo_white.png"
     } else {
         navbar.classList.remove('scrolled')
-        srclogo.src="/drewland_realizacje/schody/logo_white.png"
+        srclogo.src="/drewland_realizacje/schody/logo_black.png"
     }
 })
 
