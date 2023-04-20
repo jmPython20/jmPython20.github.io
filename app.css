@@ -41,7 +41,7 @@ body {
 @media(max-width:768px){
     body{
         background-image: url("/drewland_realizacje/schody/tlokamien_telefon.png");
-        background-size: cover;
+        background-size: contain;
     }
 }
 
