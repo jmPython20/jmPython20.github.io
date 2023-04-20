@@ -1,5 +1,5 @@
 const navbar = document.querySelector('.navbar')
-
+const srclogo = document.querySelector('.logo')
 const hamburger = document.querySelector('.hamburger')
 const navLinks = document.querySelector('.nav-links')
 const navLinksLi = document.querySelectorAll('.nav-links li')
@@ -8,10 +8,14 @@ const navLinksLi = document.querySelectorAll('.nav-links li')
 window.addEventListener('scroll', () => {
     if(this.scrollY >= 100) {
         navbar.classList.add('scrolled')
+        srclogo.src="/drewland_realizacje/schody/logo_black.png"
     } else {
         navbar.classList.remove('scrolled')
+        srclogo.src="/drewland_realizacje/schody/logo_white.png"
     }
 })
+
+
 
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active')
