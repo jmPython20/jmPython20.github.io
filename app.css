@@ -277,6 +277,10 @@ section {
 
 /* ------------------------------------------#home ---------------------------------------- */
 
+.container-big-text .heading-xl,.container-big-text .heading-1,.container-big-text .heading-2{
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 #home {
     min-height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.142)) , url("/drewland_realizacje/schody/tloschody.jpeg");
