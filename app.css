@@ -5,7 +5,7 @@
 /* info kolory, text, itp */
 :root{
     --c-brand: #fac562;
-    --c-dark: #333;
+    --c-dark: #f0f0f0;
     --c-body: 666;
     --f-base: "Plus Jakarta Sans", sans-serif;
     --n-height:100px;
@@ -18,24 +18,38 @@
     box-sizing: border-box;
 }
 
+#contact p, #realizacje p {
+    color: white;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 
 body {
+    background-image: url("/drewland_realizacje/schody/tlokamienczarny.png");
+    background-attachment: fixed;
+    background-size: cover;
     color: var(--c-body);
     font-family: var(--f-base);
     line-height: 1.8;
     font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6{
+h2, h3, h4, h5, h6{
     color:var(--c-dark);
     line-height: 1.2;
     margin-bottom: 10px;
     font-weight: 400;
 
+}
+
+h1 {
+    color:var(--c-light);
+    line-height: 1.2;
+    margin-bottom: 10px;
+    font-weight: 400;
 }
 
 .heading-xl {
@@ -65,6 +79,15 @@ a {
 a:hover {
     color: var(--c-brand);
 }
+
+#home a {
+    color: #464646;
+}
+
+#home a:hover {
+    color: var(--c-brand);
+}
+
 
 .img_realizacje, .img_stoly {
     max-width: 100%;
@@ -192,11 +215,11 @@ section {
 }
 
 .scrolled .brand{
-    color: var(--c-dark);
+    color:#464646;
 }
 
 .scrolled .nav-links li a{
-    color: var(--c-dark);
+    color: #464646;
 }
 
 .scrolled .nav-links li a:hover{
@@ -244,12 +267,13 @@ section {
 
 #home {
     min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.142)) , url("/drewland_realizacje/schody/tlostrona.jpg");
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.142)) , url("/drewland_realizacje/schody/tloschody.jpeg");
     background-position: center;
     background-size: cover;
     display: grid;
     place-content: center;
     text-align: center;
+    border-bottom: 10px #fac562 solid;
 }
 
 #home h1 {
@@ -293,6 +317,10 @@ section {
     animation: scrolltodown 2s ease infinite;
 }
 
+
+
+
+
 /* --------------------- Section Intro --------------------*/
 
 .section-intro{
@@ -330,14 +358,19 @@ section {
     }
 }
 
-/*--------------------------- O nas ------------------------------*/
+/*--------------------------- Dlaczego my? ------------------------------*/
 
 #O_nas .grid{
     gap: 0;
 }
 
+
+.service:nth-child(2),.service:nth-child(4),.service:nth-child(6){
+    background-color: rgba(109, 109, 109, 0.815);
+}
+
 .service:nth-child(odd) {
-    background-color: var(--c-light);
+    background-color: rgba(196, 196, 196, 0.815);
 }
 
 .service {
@@ -363,8 +396,12 @@ section {
     gap: 0;
 }
 
+.montaz:nth-child(1){
+   background-color: rgba(196, 196, 196, 0.815);
+}
+
 .montaz:nth-child(2) {
-    background-color: var(--c-light);
+    background-color: rgba(109, 109, 109, 0.815);
 }
 
 .montaz {
@@ -441,16 +478,35 @@ section {
 
 /*-------------------- realizacje ----------------------*/
 
-#realizacje {
+/* #realizacje {
     background-color: var(--c-light);
+} */
 
+.realizacje-post{
+    background-color: rgba(49, 49, 49, 0.815);
+
+    
 }
 
 .realizacje-post h3 {
     margin-top: 16px;
+    padding-left: 3px;
+    
+}
+.realizacje-post p {
+    padding-left: 3px;
+    
 }
 
 /* ----------------- contact ------------- */
+
+.contact-widget ul li {
+    color: aliceblue;
+}
+
+.form-group button {
+    color: #ffffff;
+}
 
 #contact .grid {
     grid-template-columns: 1fr 2.5fr;
@@ -509,7 +565,7 @@ iframe{
 /* ----------------- footer------------- */
 
 footer {
-    background-color: var(--c-dark);
+    background-color: #464646;
     padding: 15px 0;
 }
 
