@@ -73,7 +73,7 @@ function closeFullImg(){
 function goRight(){
     let element = fullimg.getAttribute('src');
     console.log(element);
-    let position = images.indexOf(element.replace('http://127.0.0.1:5501/drewland_realizacje/',''));
+    let position = images.indexOf(element.replace('https://jmpython20.github.io/drewland_realizacje/',''));
     const positionActual= position + 1;
     const lastIndex = images.length - 1;
     if (position !== -1 && positionActual <= lastIndex) {
@@ -86,7 +86,7 @@ function goRight(){
 function goLeft(){
     let element = fullimg.getAttribute('src');
     console.log(element);
-    let position = images.indexOf(element.replace('http://127.0.0.1:5501/drewland_realizacje/',''));
+    let position = images.indexOf(element.replace('https://jmpython20.github.io/drewland_realizacje/',''));
     const positionActual= position - 1;
     const lastIndex = images.length - 1;
     if (position !== -1 && positionActual >=0) {
