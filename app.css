@@ -43,8 +43,8 @@ html {
         
     }
     body {
-    background-image: url("");
-    background-color: black;
+        background-image: url("");
+        background-color: black;
     }
 }
 
@@ -681,6 +681,7 @@ footer a:not(:last-child){
     position:  absolute;
     font-size: 30px;
     color: rgb(255, 255, 255);
+    background-color: #46464659;
     cursor: pointer;
     z-index: 100;
 }
@@ -688,6 +689,7 @@ footer a:not(:last-child){
 .full-img #x_span{
     top:5%;
     right: 5%;
+    padding: 0 16px;
 }
 
 .full-img #right_span{
