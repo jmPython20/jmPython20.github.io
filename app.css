@@ -42,6 +42,10 @@ html {
         z-index: -1;
         
     }
+    body {
+    background-image: url("");
+    background-color: black;
+    }
 }
 
 
